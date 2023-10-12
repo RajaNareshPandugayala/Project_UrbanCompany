@@ -1,0 +1,596 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, "Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif !important;
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+}
+
+a,
+.logo_name {
+    text-decoration: none;
+    line-height: 15px;
+}
+
+/* .logo_name {
+    line-height: 10px;
+} */
+
+.logo {
+    width: 40px;
+    margin-top: 15px;
+}
+
+.header_logo {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* background-color: red; */
+    gap: 10px;
+    width: 140px;
+
+
+}
+
+.header {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+button {
+    padding: 12px 30px;
+    border: 1px solid rgb(197, 195, 195);
+    background-color: aliceblue;
+    border-radius: 0.2cm;
+}
+
+button:hover {
+    background-color: rgb(203, 0, 0);
+    cursor: pointer;
+}
+
+
+
+
+/* Add styles for the popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+}
+
+.popup-content {
+    background-color: white;
+    border-radius: 10px;
+    width: 38%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: fadeIn 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 50px 0px black;
+
+}
+
+/* Define the CSS animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.head,
+.country_code,
+.checkbox,
+.proceed_bt,
+.input-container {
+    padding: 10px 10px 5px 10px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.head {
+    font-weight: lighter;
+}
+
+.number {
+    padding: 20px;
+    width: 70%;
+}
+
+.input-container select {
+    padding: 20px 10px;
+    width: 18%;
+}
+
+.close-btn {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0px 8px 3px 8px;
+    font-weight: bolder;
+    background-color: aliceblue;
+}
+
+.input-container {
+    margin-top: 10px;
+}
+
+.popup .proceed_button {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.logout-message,
+.success_message {
+    text-shadow: 1px 1px 2px black;
+}
+
+
+.dashboard:hover,
+.login_button:hover {
+    transition-duration: 0.2s;
+    transform: translatey(-3px);
+}
+
+
+
+/******************************************************/
+
+/* Add styles for the focused input field */
+.number:focus::placeholder {
+    transform: translateY(-18px);
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+
+/******************************************************/
+
+
+.code-input input {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 0.15cm;
+}
+
+
+.edit-number {
+    text-decoration: underline;
+}
+
+.edit-number:hover {
+    cursor: pointer;
+    color: darkred;
+}
+
+
+#resend-link {
+    color: black;
+    text-align: center;
+    text-shadow: 1px 1px 2px darkred;
+    text-decoration: underline;
+}
+
+
+
+
+.success_message,
+.logout-message {
+    display: none;
+    text-align: center;
+    color: green;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+
+
+.logout-button {
+    background-color: gray;
+    color: white;
+}
+
+
+
+.edit-number,
+.verification_Code,
+.verification-message,
+.code-input,
+.resend-code,
+.popup_login {
+    padding: 0px 10px 0px 10px;
+}
+
+
+.popup .login-button {
+    padding: 15px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+
+img {
+    animation: img 5s linear infinite;
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+@keyframes img {
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.logo_name {
+    animation: logo_name 5s linear;
+    text-shadow: 1px 1px 2px rgb(38, 0, 255);
+}
+
+
+@keyframes logo_name {
+    99% {
+        transform: scalex(0);
+
+    }
+
+    100% {
+        transform: scalex(10);
+
+    }
+}
+
+
+.otp_massage {
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-align: center;
+    text-shadow: 1px 1px 2px red;
+    font-weight: bolder;
+}
+
+
+
+/*********************************************************************************/
+
+
+
+@media screen and (min-width: 150px) and (max-width: 270px) {
+    .popup-content {
+        width: 85%;
+    }
+
+    .head,
+    .country_code,
+    .checkbox,
+    .proceed_bt,
+    .input-container {
+        gap: 10px;
+        padding: 0px 5px 2px 10px;
+        font-size: 10px;
+
+    }
+
+
+    .edit-number,
+    .verification_Code,
+    .verification-message,
+    .code-input,
+    .resend-code,
+    .popup_login {
+        padding: 0px 10px 0px 10px;
+        font-size: 10px;
+    }
+
+    .number {
+        padding: 10px 10px;
+        width: 60%;
+        font-size: 8px;
+    }
+
+    .input-container select {
+        padding: 10px 0px;
+        width: 18%;
+        font-size: 8px;
+    }
+
+    .header {
+        padding: 0px 5%;
+    }
+
+
+    .popup .proceed_button {
+        padding: 5px 20px;
+        margin-top: 0px;
+        width: 99%;
+    }
+
+    .close-btn {
+        padding: auto;
+        font-size: 10px;
+        top: -20px;
+    }
+
+    .success_message {
+        font-size: 12px;
+    }
+
+    .otp_massage {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (min-width: 271px) and (max-width: 350px) {
+    .popup-content {
+        width: 80%;
+    }
+
+    .head,
+    .country_code,
+    .checkbox,
+    .proceed_bt,
+    .input-container {
+        gap: 10px;
+        padding: 0px 5px 2px 10px;
+        font-size: 10px;
+
+    }
+
+
+    .edit-number,
+    .verification_Code,
+    .verification-message,
+    .code-input,
+    .resend-code,
+    .popup_login {
+        padding: 0px 10px 0px 10px;
+        font-size: 10px;
+    }
+
+
+    .number {
+        padding: 10px 10px;
+        width: 65%;
+        font-size: 8px;
+    }
+
+    .input-container select {
+        padding: 10px 0px;
+        width: 18%;
+        font-size: 8px;
+    }
+
+    .header {
+        padding: 0px 5%;
+    }
+
+
+    .popup .proceed_button {
+        padding: 5px 20px;
+        margin-top: 0px;
+        width: 99%;
+    }
+
+    .close-btn {
+        padding: auto;
+        font-size: 10px;
+        top: -20px;
+    }
+
+    .success_message {
+        font-size: 20px;
+    }
+
+    .otp_massage {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (min-width: 351px) and (max-width: 550px) {
+    .popup-content {
+        width: 80%;
+    }
+
+    .head,
+    .country_code,
+    .checkbox,
+    .proceed_bt,
+    .input-container {
+        gap: 10px;
+        padding: 0px 5px 2px 10px;
+
+    }
+
+    .number {
+        padding: 20px 10px;
+        width: 70%;
+    }
+
+    .input-container select {
+        padding: 20px 0px;
+        width: 17%;
+    }
+
+    .header {
+        padding: 0px 5%;
+    }
+
+    .popup .proceed_button {
+        width: 99%;
+    }
+
+    .close-btn {
+        padding: auto;
+        font-size: 15px;
+        top: -30px;
+    }
+
+}
+
+
+@media screen and (min-width: 551px) and (max-width: 750px) {
+    .popup-content {
+        width: 65%;
+    }
+
+    .head,
+    .country_code,
+    .checkbox,
+    .proceed_bt,
+    .input-container {
+        gap: 10px;
+        padding: 0px 5px 2px 10px;
+
+    }
+
+    .number {
+        padding: 20px 10px;
+        width: 73%;
+    }
+
+    .input-container select {
+        padding: 20px 5px;
+        width: 17%;
+    }
+
+    .header {
+        padding: 0px 5%;
+    }
+
+    .popup .proceed_button {
+        width: 98%;
+    }
+
+    .close-btn {
+        padding: auto;
+        font-size: 18px;
+        top: -35px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 751px) and (max-width: 950px) {
+    .popup-content {
+        width: 450px;
+    }
+
+    .head,
+    .country_code,
+    .checkbox,
+    .proceed_bt,
+    .input-container {
+        gap: 10px;
+        padding: 0px 5px 2px 10px;
+
+    }
+
+    .number {
+        padding: 20px 10px;
+        width: 73%;
+    }
+
+    .input-container select {
+        padding: 20px 5px;
+        width: 17%;
+    }
+
+    .header {
+        padding: 0px 5%;
+    }
+
+    .popup .proceed_button {
+        width: 98%;
+    }
+
+    .close-btn {
+        padding: auto;
+        font-size: 20px;
+        top: -40px;
+    }
+
+}
+
+
+@media screen and (min-width: 951px) and (max-width: 1120px) {
+    .popup-content {
+        width: 450px;
+    }
+
+    .head,
+    .country_code,
+    .checkbox,
+    .proceed_bt,
+    .input-container {
+        gap: 10px;
+        padding: 0px 5px 2px 10px;
+
+    }
+
+    .number {
+        padding: 20px 10px;
+        width: 73%;
+    }
+
+    .input-container select {
+        padding: 20px 5px;
+        width: 17%;
+    }
+
+    .header {
+        padding: 0px 5%;
+    }
+
+    .popup .proceed_button {
+        width: 98%;
+    }
+
+
+    .close-btn {
+        padding: auto;
+        font-size: 20px;
+        top: -40px;
+    }
+
+}

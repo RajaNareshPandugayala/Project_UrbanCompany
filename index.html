@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Company - Get Expert Professional Services at Home in Hyderabad</title>
+    <link rel="shortcut icon" type="image/png"
+        href="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="parent">
+        <div class="header">
+            <div class="header_logo"><a href="https://www.urbancompany.com/hyderabad">
+                    <div class="logo_image"><img
+                            src="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png"
+                            alt="UrbanCompany_logo" class="logo">
+                    </div>
+                </a>
+                <a href="https://www.urbancompany.com/hyderabad">
+                    <div>
+                        <h3 class="logo_name">Urban Company</h3>
+                    </div>
+                </a>
+
+            </div>
+            <div class="login_button">
+                <button>Login</button>
+            </div>
+            <div class="dashboard" style="display: none;">
+                <button class="logout-button" id="logoutButton">Logout</button>
+            </div>
+        </div>
+    </header>
+    <div class="popup" id="loginPopup">
+        <form action="#" method="get">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h2 class="head"><b>Login/Sign Up</b></h2>
+
+                <div class="input-container">
+                    <select>
+                        <option value="+91" class="country_code">+91</option>
+                        <!-- Add other country codes here -->
+                    </select>
+
+                    <input type="tel" placeholder="Enter your 10-digit phone number" maxlength="10" autocomplete="true"
+                        class="number" onfocus="placeholderUp()">
+
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">
+                        Get order updates on WhatsApp
+                    </label><br>
+                </div>
+                <hr>
+                <div class="proceed_bt">
+                    <input type="submit" value="Proceed" class="proceed_button">
+                </div>
+            </div>
+        </form>
+        <form action="#" method="get">
+            <div class="popup-content popup-content2">
+                <div class="verification-code" style="display: none;">
+                    <span class="close-btn" onclick="closePopup()">&times;</span>
+                    <p class="edit-number">Edit Number</p>
+                    <h3 class="verification_Code">Verification Code</h3>
+                    <p class="verification-message">We have sent you a 4-digit code on <span
+                            id="selected-country-code">+91</span><span id="entered-number">1234567890</span></p>
+                    <div class="code-input">
+                        <input type="text" maxlength="1" pattern="[0-9]" id="code-input-1" />
+                        <input type="text" maxlength="1" pattern="[0-9]" id="code-input-2" />
+                        <input type="text" maxlength="1" pattern="[0-9]" id="code-input-3" />
+                        <input type="text" maxlength="1" pattern="[0-9]" id="code-input-4" />
+                    </div>
+                    <div class="resend-code">
+                        <span id="timer">60</span> secs left&nbsp;<a href="#" id="resend-link">Resend code</a>
+                    </div>
+                    <hr>
+                    <div class="popup_login">
+                        <button class="login-button" style="background-color: gray; color: white;"
+                            id="loginButton">Login</button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="success_message" style="display: none;">!!!Successful Login!!!
+        <h2>Welcome to the Urban Company</h2>
+    </div>
+
+    <div class="logout-message" style="display: none;">Logout</div>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
